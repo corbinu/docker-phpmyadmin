@@ -13,6 +13,7 @@ RUN apt-get install -y mysql-client
 RUN wget http://downloads.sourceforge.net/project/phpmyadmin/phpMyAdmin/4.2.7.1/phpMyAdmin-4.2.7.1-english.tar.bz2
 RUN tar -xvjf /phpMyAdmin-4.2.7.1-english.tar.bz2 -C /
 RUN rm /phpMyAdmin-4.2.7.1-english.tar.bz2
+RUN rm -r /www
 RUN mv /phpMyAdmin-4.2.7.1-english /www
 
 ADD sources/config.inc.php /
@@ -25,4 +26,4 @@ RUN chmod +x /usr/local/bin/phpmyadmin-firstrun
 
 EXPOSE 80
 
-CMD [ phpmyadmin-start ]
+CMD phpmyadmin-start
