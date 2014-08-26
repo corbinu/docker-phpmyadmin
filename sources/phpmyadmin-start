@@ -1,0 +1,22 @@
+#!/bin/sh
+
+if [ -f "/usr/local/bin/phpmyadmin-firstrun" ];
+then
+	/usr/local/bin/phpmyadmin-firstrun
+fi
+
+cp /config.inc.php /www
+
+sed -i.bak 's|$PMA_SECRET|'"$PMA_SECRET"'|g' /www/config.inc.php
+sed -i.bak 's|$PMA_USERNAME|'"$PMA_USERNAME"'|g' /www/config.inc.php
+sed -i.bak 's|$PMA_PASSWORD|'"$PMA_PASSWORD"'|g' /www/config.inc.php
+sed -i.bak 's|$MYSQL_PORT_3306_TCP_ADDR|'"$MYSQL_PORT_3306_TCP_ADDR"'|g' /www/config.inc.php
+sed -i.bak 's|$MYSQL_PORT_3306_TCP_PORT|'"$MYSQL_PORT_3306_TCP_PORT"'|g' /www/config.inc.php
+
+service php5-fpm start
+
+service nginx start
+
+while(true) do
+	sleep 60
+done
