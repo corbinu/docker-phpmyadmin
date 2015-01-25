@@ -16,4 +16,4 @@ Current PHPMyAdmin Version 4.3.8
 `docker run --name phpmyadmin-mysql -e MYSQL_ROOT_PASSWORD=password -d mysql`
 
 ## Start PHPMyAdmin
-`docker run -d --link mysql:mysql -e MYSQL_USERNAME=root --name phpmyadmin -p 80 corbinu/docker-phpmyadmin `
+`docker run -d --link phpmyadmin-mysql:mysql -e MYSQL_USERNAME=root --name phpmyadmin -p 80 corbinu/docker-phpmyadmin`
