@@ -3,13 +3,13 @@ Docker PHPMyAdmin
 
 First off it appears this little container I set up for myself has gotten a lot more popular then I expected. I promise to be much more diligent about updates and will be looking to make improvements. Please feel free to make suggestions
 
-Current PHPMyAdmin Version 4.3.9
+Current PHPMyAdmin Version 4.4.1.1
 
 * Ubuntu 14.04
 * PHP 5.6
 * Nginx Mainline
 * MySQL 5.6
-* PHPMyAdmin 4.3.9 (configurable with Environment Variable)
+* PHPMyAdmin 4.4.1.1 (configurable with Environment Variable)
 
 ## Start MySQL
 
