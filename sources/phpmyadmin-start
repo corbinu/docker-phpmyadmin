@@ -18,8 +18,4 @@ sed -i \
 
 service php5-fpm start
 
-service nginx start
-
-while(true) do
-	sleep 60
-done
+exec nginx -g "daemon off;"
