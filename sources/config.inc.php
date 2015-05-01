@@ -17,6 +17,11 @@
 $cfg['blowfish_secret'] = "$PMA_SECRET"; /* YOU MUST FILL IN THIS FOR COOKIE AUTH! */
 
 /*
+ * Absolute URI
+ */
+$cfg['PmaAbsoluteUri'] = "$PMA_URI";
+
+/*
  * Servers configuration
  */
 $i = 0;
