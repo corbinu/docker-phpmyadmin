@@ -7,12 +7,12 @@ fi
 
 cp /config.inc.php /www
 
-sed -i.bak 's|$PMA_SECRET|'"$PMA_SECRET"'|g' /www/config.inc.php
-sed -i.bak 's|$PMA_USERNAME|'"$PMA_USERNAME"'|g' /www/config.inc.php
-sed -i.bak 's|$PMA_PASSWORD|'"$PMA_PASSWORD"'|g' /www/config.inc.php
-sed -i.bak 's|$PMA_URI|'"$PMA_URI"'|g' /www/config.inc.php
-sed -i.bak 's|$MYSQL_PORT_3306_TCP_ADDR|'"$MYSQL_PORT_3306_TCP_ADDR"'|g' /www/config.inc.php
-sed -i.bak 's|$MYSQL_PORT_3306_TCP_PORT|'"$MYSQL_PORT_3306_TCP_PORT"'|g' /www/config.inc.php
+sed -i 's|$PMA_SECRET|'"$PMA_SECRET"'|g' /www/config.inc.php
+sed -i 's|$PMA_USERNAME|'"$PMA_USERNAME"'|g' /www/config.inc.php
+sed -i 's|$PMA_PASSWORD|'"$PMA_PASSWORD"'|g' /www/config.inc.php
+sed -i 's|$PMA_URI|'"$PMA_URI"'|g' /www/config.inc.php
+sed -i 's|$MYSQL_PORT_3306_TCP_ADDR|'"$MYSQL_PORT_3306_TCP_ADDR"'|g' /www/config.inc.php
+sed -i 's|$MYSQL_PORT_3306_TCP_PORT|'"$MYSQL_PORT_3306_TCP_PORT"'|g' /www/config.inc.php
 
 service php5-fpm start
 
