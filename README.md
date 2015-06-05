@@ -9,7 +9,7 @@ Current PHPMyAdmin Version 4.4.4
 * PHP 5.6
 * Nginx Mainline
 * MySQL 5.6
-* PHPMyAdmin 4.4.4 (configurable with Environment Variable)
+* PHPMyAdmin 4.4.9 (configurable with Environment Variable)
 
 ## Start MySQL
 
