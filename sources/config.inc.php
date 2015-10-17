@@ -14,12 +14,12 @@
  * This is needed for cookie based authentication to encrypt password in
  * cookie
  */
-$cfg['blowfish_secret'] = "PMA_SECRET"; /* YOU MUST FILL IN THIS FOR COOKIE AUTH! */
+$cfg['blowfish_secret'] = "$PMA_SECRET"; /* YOU MUST FILL IN THIS FOR COOKIE AUTH! */
 
 /*
  * Absolute URI
  */
-$cfg['PmaAbsoluteUri'] = "";
+$cfg['PmaAbsoluteUri'] = "$PMA_URI";
 
 /*
  * Servers configuration
@@ -33,8 +33,8 @@ $i++;
 /* Authentication type */
 $cfg['Servers'][$i]['auth_type'] = 'cookie';
 /* Server parameters */
-$cfg['Servers'][$i]['host'] = "172.17.0.23";
-$cfg['Servers'][$i]['port'] = "3306";
+$cfg['Servers'][$i]['host'] = "$MYSQL_PORT_3306_TCP_ADDR";
+$cfg['Servers'][$i]['port'] = "$MYSQL_PORT_3306_TCP_PORT";
 $cfg['Servers'][$i]['connect_type'] = 'tcp';
 $cfg['Servers'][$i]['compress'] = true;
 /* Select mysql if your server does not have mysqli */
@@ -46,8 +46,8 @@ $cfg['Servers'][$i]['AllowNoPassword'] = false;
  */
 
 /* User used to manipulate with storage */
-$cfg['Servers'][$i]['controluser'] = "admin";
-$cfg['Servers'][$i]['controlpass'] = "jinxmachine";
+$cfg['Servers'][$i]['controluser'] = "$PMA_USERNAME";
+$cfg['Servers'][$i]['controlpass'] = "$PMA_PASSWORD";
 
 /* Storage database and tables */
 $cfg['Servers'][$i]['pmadb'] = 'phpmyadmin';
