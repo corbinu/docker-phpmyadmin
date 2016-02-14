@@ -31,7 +31,9 @@ $i = 0;
  */
 $i++;
 /* Authentication type */
-$cfg['Servers'][$i]['auth_type'] = 'cookie';
+$cfg['Servers'][$i]['auth_type'] = '$PMA_AUTH_TYPE';
+$cfg['Servers'][$i]['user'] = '$PMA_USERNAME';
+$cfg['Servers'][$i]['password'] = '$PMA_PASSWORD';
 /* Server parameters */
 $cfg['Servers'][$i]['host'] = "$MYSQL_PORT_3306_TCP_ADDR";
 $cfg['Servers'][$i]['port'] = "$MYSQL_PORT_3306_TCP_PORT";

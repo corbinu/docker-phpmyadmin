@@ -5,6 +5,7 @@ ENV PMA_SECRET          blowfish_secret
 ENV PMA_USERNAME        pma
 ENV PMA_PASSWORD        password
 ENV PMA_NO_PASSWORD     0
+ENV PMA_AUTH_TYPE       cookie
 ENV MYSQL_USERNAME      mysql
 ENV MYSQL_PASSWORD      password
 
