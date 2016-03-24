@@ -31,7 +31,9 @@ $i = 0;
  */
 $i++;
 /* Authentication type */
-$cfg['Servers'][$i]['auth_type'] = 'cookie';
+$cfg['Servers'][$i]['auth_type'] = '$PMA_AUTH_TYPE';
+$cfg['Servers'][$i]['user'] = '$PMA_USERNAME';
+$cfg['Servers'][$i]['password'] = '$PMA_PASSWORD';
 /* Server parameters */
 $cfg['Servers'][$i]['host'] = "$MYSQL_PORT_3306_TCP_ADDR";
 $cfg['Servers'][$i]['port'] = "$MYSQL_PORT_3306_TCP_PORT";
@@ -39,7 +41,7 @@ $cfg['Servers'][$i]['connect_type'] = 'tcp';
 $cfg['Servers'][$i]['compress'] = true;
 /* Select mysql if your server does not have mysqli */
 $cfg['Servers'][$i]['extension'] = 'mysqli';
-$cfg['Servers'][$i]['AllowNoPassword'] = false;
+$cfg['Servers'][$i]['AllowNoPassword'] = $PMA_NO_PASSWORD;
 
 /*
  * phpMyAdmin configuration storage settings.
@@ -185,6 +187,8 @@ $cfg['Servers'][$i]['recent'] = 'pma__recent';
 $cfg['Servers'][$i]['favorite'] = 'pma__favorite';
 $cfg['Servers'][$i]['savedsearches'] = 'pma__savedsearches';
 $cfg['Servers'][$i]['central_columns'] = 'pma__central_columns';
+$cfg['Servers'][$i]['designer_settings'] = 'pma__designer_settings';
+$cfg['Servers'][$i]['export_templates'] = 'pma__export_templates';
 /* Contrib / Swekey authentication */
 // $cfg['Servers'][$i]['auth_swekey_config'] = '/etc/swekey-pma.conf';
 

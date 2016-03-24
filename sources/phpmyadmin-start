@@ -14,6 +14,8 @@ sed -i \
     -e "s|\$PMA_URI|$PMA_URI|g" \
     -e "s|\$MYSQL_PORT_3306_TCP_ADDR|$MYSQL_PORT_3306_TCP_ADDR|g" \
     -e "s|\$MYSQL_PORT_3306_TCP_PORT|$MYSQL_PORT_3306_TCP_PORT|g" \
+    -e "s|\$PMA_NO_PASSWORD|$(if [ "$PMA_NO_PASSWORD" -eq 1 ]; then echo "true"; else echo "false"; fi;)|g" \
+    -e "s|\$PMA_AUTH_TYPE|$PMA_AUTH_TYPE|g" \
     /www/config.inc.php
 
 service php5-fpm start
